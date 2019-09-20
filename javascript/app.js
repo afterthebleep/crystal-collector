@@ -38,6 +38,23 @@ function startGame () {
 
 function tallyCrystals (crystal){
   playerScore = playerScore + crystal.value;
+
+  $('#playerScore').html(playerScore);
+
+  compare();
+}
+
+function compare () {
+  if(playerScore === scoreToMatch) {
+    alert('WINNER!');
+    wins++;
+    $('#wins').html(wins);
+  }
+ else if(playerScore > scoreToMatch) {
+    alert('LOSER');
+    losses++;
+    $('#losses').html(losses);
+  }
 }
 
 $('#blue').on('click', function(){
