@@ -30,6 +30,9 @@ function startGame () {
   crystal.blue.value = getRandomNum(1,12);
   crystal.blended.value = getRandomNum(1,12);
   crystal.purple.value = getRandomNum(1,12);
+
+  $('#scoreToMatch').html(scoreToMatch);
+  $('#playerScore').html(playerScore);
   
 }
 
