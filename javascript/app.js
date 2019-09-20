@@ -36,14 +36,18 @@ function startGame () {
   
 }
 
+function tallyCrystals (crystal){
+  playerScore = playerScore + crystal.value;
+}
+
 $('#blue').on('click', function(){
-  // alert('success');
+  tallyCrystals(crystal.blue);
 });
 $('#blended').on('click', function(){
-  // alert('success');
+  tallyCrystals(crystal.blended);
 });
 $('#purple').on('click', function(){
-  // alert('success');
+  tallyCrystals(crystal.purple);
 });
 
 startGame();
